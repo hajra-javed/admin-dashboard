@@ -1,0 +1,107 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr;
+    background-color: skyblue;
+}
+.header {
+    display: grid;
+    grid-template-rows: 2fr 3fr;
+    grid-template-columns: 1fr;
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+    background-color: pink;
+}
+
+.header .top{
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr 1fr 1fr 3fr;
+    grid-row: 1;
+    padding: 10px;
+}
+
+.header .top > *{
+    justify-self: center;
+    align-self: center;
+}
+
+.header .top > .search{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.header .top > input{
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+}
+
+.header .top > .notifications{
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.header .top > .pic-icon{
+    width: 60px;
+    height: 60px;
+    grid-column: 5;
+    grid-row: 1;
+}
+
+.pic-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.header .top > .name{
+    grid-column: 6;
+    grid-row: 1;
+    font-size: 1.25rem;
+}
+
+.header .bottom{
+    grid-row: 2;
+}
+
+.sidebar{
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    background-color: thistle;
+    display: grid;
+    grid-template-rows: 12vh repeat(2, 1fr);
+    color: white;
+}
+
+.controls{
+    align-self: end;
+}
+
+.dashboard{
+    font-size: 2rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-link{
+    padding: 5px;
+}
+
+.sidebar a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
