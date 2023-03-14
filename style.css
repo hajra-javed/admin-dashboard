@@ -53,8 +53,8 @@ body{
 }
 
 .header .top > .pic-icon{
-    width: 60px;
-    height: 60px;
+    width: 2.5em;
+    height: 2.5em;
     grid-column: 5;
     grid-row: 1;
 }
@@ -74,6 +74,55 @@ body{
 
 .header .bottom{
     grid-row: 2;
+    display: grid;
+    grid-template-columns: 2fr 8fr repeat(3, 2fr);
+    grid-template-rows: 1fr;
+}
+
+.header .bottom > *{
+    justify-self: center;
+    align-self: center;
+}
+
+.header .bottom > .pic-icon{
+    width: 4.5em;
+    height: 4.5em;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.header .bottom > .user{
+    grid-column: 2;
+    justify-self: unset;
+    font-weight: bold;
+}
+
+.header .bottom > .user .hi{
+    font-size: 0.8em;
+}
+
+.header .bottom .options{
+    background-color: aquamarine;
+    width: 5em;
+    height: 2em;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1em;
+}
+
+.options.new{
+    grid-column: 3;
+    justify-self: right
+}
+
+.options.upload{
+    grid-column: 4;
+}
+
+.options.share{
+    grid-column: 5;
+    justify-self: left;
 }
 
 .sidebar{
