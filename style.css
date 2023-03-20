@@ -9,7 +9,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 5fr;
-    background-color: skyblue;
+    /* background-color: skyblue; */
 }
 .header {
     display: grid;
@@ -17,7 +17,8 @@ body{
     grid-template-columns: 1fr;
     grid-column: 2 / -1;
     grid-row: 1 / 2;
-    background-color: pink;
+    /* background-color: pink; */
+    box-shadow: 0px 5px 10px grey;
 }
 
 .header .top{
@@ -45,6 +46,7 @@ body{
     border-radius: 15px;
     border: none;
     padding: 10px;
+    background-color: #ebebeb;
 }
 
 .header .top > .notifications{
@@ -70,6 +72,7 @@ body{
     grid-column: 6;
     grid-row: 1;
     font-size: 1.25rem;
+    font-weight: bolder;
 }
 
 .header .bottom{
@@ -102,13 +105,15 @@ body{
 }
 
 .header .bottom .options{
-    background-color: aquamarine;
+    background-color: deepskyblue;
     width: 5em;
     height: 2em;
     display: grid;
     align-items: center;
     justify-content: center;
     border-radius: 1em;
+    color: white;
+    border: solid 2px black;
 }
 
 .options.new{
@@ -131,6 +136,7 @@ body{
     background-color: thistle;
     display: grid;
     grid-template-rows: 12vh repeat(2, 1fr);
+    background-color: thistle;
     color: white;
 }
 
@@ -139,7 +145,7 @@ body{
 }
 
 .dashboard{
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -150,7 +156,7 @@ body{
 }
 
 .sidebar a{
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     text-decoration: none;
     color: white;
 }
@@ -158,11 +164,14 @@ body{
 .main-content{
     display: grid;
     grid-template-columns: 3fr 3fr 2fr;
+    background-color: aliceblue;
+    position: relative;
+    z-index: -1;
 }
 
 .projects{
     grid-column: 1 / span 2;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 5vh repeat(3, 1fr);
@@ -175,15 +184,17 @@ body{
 }
 
 .project{
-    background-color: pink;
+    background-color: white;
     padding: 10px;
+    border-radius: 10px;
+    border-left: solid 10px grey;
 }
 
 .right-pane{
     grid-column: 3;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    background-color:  aliceblue;
+    /* background-color:  aliceblue; */
     gap: 20px;
     padding: 20px;
 }
